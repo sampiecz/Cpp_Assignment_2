@@ -1,11 +1,28 @@
-/***********************************************************
- CSCI 241 - Assignment 2 - Fall 2017
- 
- Progammer: Sam Piecz
- Z-ID: Z1732715
- Section: 1
- TA: Sumaiya Abdul
- Date Due: September 26, 2017
- 
- Purpose: Not quite sure yet.  Some continuation of providers.
- ************************************************************/
+#include <cstdio>
+#include <"Provider.h">
+using namespace std;
+
+//Provider Constructor
+Provider::Provider()
+{
+}
+
+//Print
+void Provider::print() const
+{
+}
+
+//Get provider number (return it)
+int Provider::getProviderNumber()
+{
+}
+
+//Get specialty (return it)
+int Provider::getSpecialty()
+{
+}
+
+//Get name (return it)
+int Provider::getName()
+{
+}

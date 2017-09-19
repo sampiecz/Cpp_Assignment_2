@@ -12,34 +12,33 @@
 //********************************************************************
 
 class Provider
-    {
-        private:
-            //Data members
-            char number[7] = {};
-            char specialty[41] = {};
-            char name[41] = {};
-            char address_1[41] = {};
-            char address_2[31] = {};
-            char city[21] = {};
-            char state[3] = {};
-            char zip_code[6] = {};
-            char phone_number[15] = {};
+{
+    private:
+        //Data members
+        char number[7] = {};
+        char specialty[41] = {};
+        char name[41] = {};
+        char address_1[41] = {};
+        char address_2[31] = {};
+        char city[21] = {};
+        char state[3] = {};
+        char zip_code[6] = {};
+        char phone_number[15] = {};
 
-        public:
-            //Method prototypes
+    public:
+        //Method prototypes
 
-            //Default constructor
-            Provider();
+        //Default constructor
+        Provider();
 
-            //Print provider data
-            void print() const;
+        //Print provider data
+        void print() const;
 
-            //Accessor method returns provider number data member
-            int getProviderNumber() const;
+        //Accessor method returns provider number data member
+        int getProviderNumber() const;
 
-            //Accessor method that returns specialty data member
-            int getName() const;
-
-    };
+        //Accessor method that returns specialty data member
+        int getName() const;
+};
 
 #endif
