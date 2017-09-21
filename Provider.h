@@ -39,6 +39,9 @@ class Provider
 
         //Accessor method that returns specialty data member
         int getName() const;
+
+        //Accessor method that returns specialty
+        int getSpecialty() const;
 };
 
 #endif

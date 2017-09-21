@@ -1,0 +1,38 @@
+#ifndef PROVIDER_H
+#define PROVIDER_H
+
+//*********************************************************************
+// FILE:        ProviderDB.h
+// AUTHOR:      Samuel Piecz
+// LOGON ID:    Z1732715
+// DUE DATE:    9/26/17
+//
+// PURPOSE:     Declaration for the Provider DB, which contains
+//              an array of provider objects.
+//********************************************************************
+#include <"Provider.h">
+class Provider
+    {
+        private:
+            //Data members
+            char phone_number[15] = {};
+
+        public:
+            //Method prototypes
+
+            //Default constructor
+            Provider();
+
+            //Print provider data
+            void print() const;
+
+            //Accessor method returns provider number data member
+            int getProviderNumber() const;
+
+            //Accessor method that returns specialty data member
+            int getName() const;
+
+    };
+
+#endif
+
