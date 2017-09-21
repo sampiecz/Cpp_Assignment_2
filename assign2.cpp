@@ -9,12 +9,13 @@
 
  Purpose: Not quite sure yet.  Some continuation of providers.
  ************************************************************/
-#include <cstdio>
+#include "Provider.h"
+#include "ProviderDB.h"
 using namespace std;
 
 int main()
 {
-    ProviderDB();
+    ProviderDB("providerdb");
     print();
     sortByProviderNumber();
     print();
