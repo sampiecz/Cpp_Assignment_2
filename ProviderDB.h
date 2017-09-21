@@ -12,7 +12,7 @@
 //********************************************************************
 #include "Provider.h"
 
-class Provider
+class ProviderDB
 {
     private:
         //Data members
@@ -28,6 +28,15 @@ class Provider
 
         //Print function
         void print() const;
+
+        //Sorting method
+        void sortByProviderNumber();
+
+        //Sorting method
+        void sortBySpecialty();
+
+        //Sorthing method
+        void sortByName();
 };
 
 #endif
