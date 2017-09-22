@@ -38,10 +38,10 @@ class Provider
         const char* getProviderNumber() { return number; }
 
         //Accessor method that returns specialty data member
-        const char*  getName() { return name; }
+        const char*  getProviderName() { return name; }
 
         //Accessor method that returns specialty
-        const char* getSpecialty() { return specialty; }
+        const char* getProviderSpecialty() { return specialty; }
 };
 
 #endif

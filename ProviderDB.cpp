@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstring>
 #include "ProviderDB.h"
 #include "Provider.h"
 
@@ -55,13 +56,13 @@ void ProviderDB::print() const
 void ProviderDB::sortByProviderNumber()
 {
     int i, j;
-    int bucket;
+    Provider bucket;
 
     for (i = 1; i < numberOfProviders; i++)
     {
         bucket = providerArray[i];
 
-        for (j = i; (j > 0) && (providerArray[j-1] > bucket); j--)
+        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderNumber(), bucket.getProviderNumber()) > 0); j--)
             providerArray[j] = providerArray[j-1];
 
         providerArray[j] = bucket;
@@ -71,13 +72,13 @@ void ProviderDB::sortByProviderNumber()
 void ProviderDB::sortBySpecialty()
 {
     int i, j;
-    int bucket;
+    Provider bucket;
 
     for (i = 1; i < numberOfProviders; i++)
     {
         bucket = providerArray[i];
 
-        for (j = i; (j > 0) && (providerArray[j-1] > bucket); j--)
+        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderSpecialty(), bucket.getProviderSpecialty()) > 0); j--)
             providerArray[j] = providerArray[j-1];
 
         providerArray[j] = bucket;
@@ -87,13 +88,13 @@ void ProviderDB::sortBySpecialty()
 void ProviderDB::sortByName()
 {
     int i, j;
-    int bucket;
+    Provider bucket;
 
     for (i = 1; i < numberOfProviders; i++)
     {
         bucket = providerArray[i];
 
-        for (j = i; (j > 0) && (providerArray[j-1] > bucket); j--)
+        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderName(), bucket.getProviderName()) > 0); j--)
             providerArray[j] = providerArray[j-1];
 
         providerArray[j] = bucket;
