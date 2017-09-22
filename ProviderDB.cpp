@@ -1,12 +1,14 @@
 #include <iostream>
 #include <fstream>
 #include "ProviderDB.h"
+#include "Provider.h"
 
 using std::cout;
 using std::cerr;
 using std::endl;
 using std::ifstream;
 using std::ios;
+
 
 ProviderDB::ProviderDB()
 {
@@ -26,6 +28,27 @@ ProviderDB::ProviderDB(const char* filename)
 
     inFile.read((char *) this, sizeof(providerArray));
     inFile.close();
+}
+
+/***************************************************************
+ print_provider_array
+ 
+ Use: Loops through array of each individual provider and calls
+ the provider print method to output each individual provider's
+ data.
+ 
+ Parameters: 1. p_array: An array containing arrays of each
+ individual provider's data.
+ 
+ 2. j: Placeholder for loop, nothing worth describing.
+ ***************************************************************/
+void ProviderDB::print() const
+{
+    // loops through each item in provider array and prints it
+    for (int i = 0; i < numberOfProviders; i++)
+    {
+        providerArray[i].print();
+    }
 }
 
 

@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    ProviderDB(providerdb);
+    ProviderDB("providerdb");
     Provider print();
 
     ProviderDB sortByProviderNumber();

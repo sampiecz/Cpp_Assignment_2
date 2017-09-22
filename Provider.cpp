@@ -25,20 +25,21 @@ void Provider::print() const
     cout << "\n";
 }
 
-//Get provider number (return it)
+/*
+
 char Provider::getProviderNumber() const
 {
-    return 0;
+   return number;
 }
 
-//Get specialty (return it)
 char Provider::getSpecialty() const
 {
-    return 0;
+    return specialty;
 }
 
-//Get name (return it)
 char Provider::getName() const
 {
-    return 0;
+    return name;
 }
+
+*/

@@ -16,8 +16,8 @@ class ProviderDB
 {
     private:
         //Data members
-        char  providerArray[40] = {};
-        int numberOfProviders = 0;
+        Provider providerArray[40];
+        int numberOfProviders;
 
     public:
         //Default constructor
