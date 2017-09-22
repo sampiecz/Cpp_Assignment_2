@@ -16,14 +16,14 @@ using namespace std;
 int main()
 {
     ProviderDB opener("providerdb");
-    Provider print();
+    opener.print();
 
-    ProviderDB sortByProviderNumber();
-    Provider print();
+    ProviderDB sortByProviderNumber;
+    sortByProviderNumber.print();
 
-    ProviderDB sortBySpecialty();
-    Provider print();
+    ProviderDB sortBySpecialty;
+    sortBySpecialty.print();
 
-    ProviderDB sortByName();
-    Provider print();
+    ProviderDB sortByName;
+    sortByName.print();
 }

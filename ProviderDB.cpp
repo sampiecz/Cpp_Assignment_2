@@ -27,7 +27,7 @@ ProviderDB::ProviderDB(const char* filename)
         exit(1);
     }
 
-    inFile.read((char *) this, sizeof(providerArray));
+    inFile.read((char *) this, sizeof(ProviderDB));
     inFile.close();
 }
 
