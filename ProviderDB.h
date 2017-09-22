@@ -24,7 +24,7 @@ class ProviderDB
         ProviderDB();
 
         //Alternate ProviderDB constructor
-        ProviderDB(char * const);
+        ProviderDB(const char* filename);
 
         //Print function
         void print() const;

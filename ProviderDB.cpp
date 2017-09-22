@@ -1,58 +1,78 @@
+#include <iostream>
+#include <fstream>
 #include "ProviderDB.h"
-using namespace std;
+
+using std::cout;
+using std::cerr;
+using std::endl;
+using std::ifstream;
+using std::ios;
 
 ProviderDB::ProviderDB()
 {
 }
 
-ProviderDB::ProviderDB(char * const)
+ProviderDB::ProviderDB(const char* filename)
 {
+    ifstream inFile;
+
+    inFile.open(filename, ios::binary);
+
+    if (!inFile)
+    {
+        cerr << "File does not exist" << endl;
+        exit(1);
+    }
+
+    inFile.read((char *) this, sizeof(providerArray));
+    inFile.close();
 }
 
-ProviderDB::sortByProvider()
+
+void ProviderDB::sortByProviderNumber()
 {
     int i, j;
     int bucket;
 
-    for (i = 1; i < size; i++)
+    for (i = 1; i < numberOfProviders; i++)
     {
-        bucket = numbers[i];
+        bucket = providerArray[i];
 
-        for (j = i; (j > 0) && (numbers[j-1] > bucket); j--)
-            numbers[j] = numbers[j-1];
+        for (j = i; (j > 0) && (providerArray[j-1] > bucket); j--)
+            providerArray[j] = providerArray[j-1];
 
-        numbers[j] = bucket;
+        providerArray[j] = bucket;
     }
 }
 
-ProviderDB::sortBySpecialty()
+void ProviderDB::sortBySpecialty()
 {
     int i, j;
     int bucket;
 
-    for (i = 1; i < size; i++)
+    for (i = 1; i < numberOfProviders; i++)
     {
-        bucket = numbers[i];
+        bucket = providerArray[i];
 
-        for (j = i; (j > 0) && (numbers[j-1] > bucket); j--)
-            numbers[j] = numbers[j-1];
+        for (j = i; (j > 0) && (providerArray[j-1] > bucket); j--)
+            providerArray[j] = providerArray[j-1];
 
-        numbers[j] = bucket;
+        providerArray[j] = bucket;
     }
 }
 
-ProviderDB::sortByName()
+void ProviderDB::sortByName()
 {
     int i, j;
     int bucket;
 
-    for (i = 1; i < size; i++)
+    for (i = 1; i < numberOfProviders; i++)
     {
-        bucket = numbers[i];
+        bucket = providerArray[i];
 
-        for (j = i; (j > 0) && (numbers[j-1] > bucket); j--)
-            numbers[j] = numbers[j-1];
+        for (j = i; (j > 0) && (providerArray[j-1] > bucket); j--)
+            providerArray[j] = providerArray[j-1];
 
-        numbers[j] = bucket;
+        providerArray[j] = bucket;
     }
 }

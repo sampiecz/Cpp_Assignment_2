@@ -15,12 +15,15 @@ using namespace std;
 
 int main()
 {
-    ProviderDB("providerdb");
-    print();
-    sortByProviderNumber();
-    print();
-    sortBySpecialty();
-    print();
-    sortByName();
-    print();
+    ProviderDB(providerdb);
+    Provider print();
+
+    ProviderDB sortByProviderNumber();
+    Provider print();
+
+    ProviderDB sortBySpecialty();
+    Provider print();
+
+    ProviderDB sortByName();
+    Provider print();
 }
