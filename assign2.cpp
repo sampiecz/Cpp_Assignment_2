@@ -15,8 +15,8 @@ using namespace std;
 
 int main()
 {
-    ProviderDB opener("providerdb");
-    opener.print();
+    ProviderDB loadData("providerdb");
+    loadData.print();
 
     ProviderDB sortByProviderNumber;
     sortByProviderNumber.print();
