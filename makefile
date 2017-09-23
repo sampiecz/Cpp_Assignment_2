@@ -6,7 +6,7 @@
 #
 
 # Compiler variables
-CCFLAGS = -Wall -std=c++11
+CCFLAGS = -Wall -std=c++11 -ggdb
 
 # Rule to link object code files to create executable file
 assign2: assign2.o Provider.o ProviderDB.o

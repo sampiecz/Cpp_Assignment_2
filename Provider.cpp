@@ -18,9 +18,7 @@ void Provider::print() const
     cout << specialty << endl;
     cout << address_1 << endl;
     cout << address_2 << endl;
-    cout << city << endl;
-    cout << state << endl;
-    cout << zip_code << endl;
+    cout << city << ", " << state << " " << zip_code << endl;
     cout << phone_number << endl;
     cout << "\n";
 }
