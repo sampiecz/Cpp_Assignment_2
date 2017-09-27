@@ -52,7 +52,7 @@ void ProviderDB::print() const
     }
 }
 
-
+/*
 void ProviderDB::sortByProviderNumber()
 {
     int i, j;
@@ -99,4 +99,54 @@ void ProviderDB::sortByName()
 
         providerArray[j] = bucket;
     }
+}
+*/
+
+
+//Attempt to start extra credit
+void ProviderDB::sort(bool (*compare)(const Provider&, const Provider&))
+{
+    int i, j, min;
+    Provider bucket;
+
+    for (i = 0; i < (numberOfProviders - 1); i++)
+    {
+        min = i;
+
+        for (j = i+1; j < numOfProviders; j++)
+        {
+            if (compare(providerArray[j], providerArray[min]))
+                min = j;
+        }
+
+        bucket = providerArray[min];
+        providerArray[min] = providerArray[i];
+        providerArray[i] = bucket;
+    }
+}
+
+// Needs to be here, but why isn't it a method? I'm assuming the prof messed up?
+// Or I should be declaring it as a method of the Provider class. Not really sure. 
+bool nameLess(const Provider& s1, const Provider& s2)
+{
+    if (strcmp(s1.getProviderName(), s2.getProviderName()) < 0)
+        return true;
+    else
+        return false;
+}
+
+bool specialtyLess(const Provider& s1, const Provider& s2)
+{
+    if (strcmp(s1.getProviderSpecialty(), s2.getProviderSpecialty()) < 0)
+        return true;
+    else
+        return false;
+}
+
+bool numberLess(const Provider& s1, const Provider& s2)
+{
+    if (strcmp(s1.getProviderNumber(), s2.getProviderNumber()) < 0)
+        return true;
+    else
+        return false;
 }

@@ -39,5 +39,10 @@ class ProviderDB
         void sortByName();
 };
 
+// Was told to put this function outside of the class.
+// Still don't really understand why that would be the case.
+// I guess it gets passed to the sort method as an argument. 
+bool nameLess(const Provider&, const Provider&);
+
 #endif
 
