@@ -106,23 +106,19 @@ void ProviderDB::sortByName()
 //Attempt to start extra credit
 void ProviderDB::sort(bool (*compare)(const Provider&, const Provider&))
 {
-    int i, j, min;
+    int i, j;
     Provider bucket;
 
-    for (i = 0; i < (numberOfProviders - 1); i++)
+    for (i = 1; i < numberOfProviders; i++)
     {
-        min = i;
+        bucket = providerArray[i];
 
-        for (j = i+1; j < numOfProviders; j++)
-        {
-            if (compare(providerArray[j], providerArray[min]))
-                min = j;
-        }
+        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderNumber(), bucket.getProviderNumber()) > 0); j--)
+            providerArray[j] = providerArray[j-1];
 
-        bucket = providerArray[min];
-        providerArray[min] = providerArray[i];
-        providerArray[i] = bucket;
+        providerArray[j] = bucket;
     }
+
 }
 
 // Needs to be here, but why isn't it a method? I'm assuming the prof messed up?
