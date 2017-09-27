@@ -7,7 +7,8 @@
  TA: Sumaiya Abdul
  Date Due: September 26, 2017
 
- Purpose: Not quite sure yet.  Some continuation of providers.
+ Purpose: Read providers from Binary data. Output providers
+ and sort them.
  ************************************************************/
 #include <iostream>
 #include "Provider.h"
@@ -17,31 +18,30 @@ using std::endl;
 
 int main()
 {
-
-    cout << "#########################" << endl;
+    cout << "#######################################################################" << endl;
     cout << "Unsorted Print of all providers" << endl;
-    cout << "#########################" << endl;
+    cout << "#######################################################################" << endl;
 
     ProviderDB loadData("providerdb");
     loadData.print();
 
-    cout << "#########################" << endl;
+    cout << "#######################################################################" << endl;
     cout << "Sorted by Provider Number" << endl;
-    cout << "#########################" << endl;
+    cout << "#######################################################################" << endl;
 
     loadData.sortByProviderNumber();
     loadData.print();
 
-    cout << "#########################" << endl;
+    cout << "#######################################################################" << endl;
     cout << "Sorted by Specialty" << endl;
-    cout << "#########################" << endl;
+    cout << "#######################################################################" << endl;
 
     loadData.sortBySpecialty();
     loadData.print();
 
-    cout << "#########################" << endl;
+    cout << "#######################################################################" << endl;
     cout << "Sorted by Name" << endl;
-    cout << "#########################" << endl;
+    cout << "#######################################################################" << endl;
 
     loadData.sortByName();
     loadData.print();

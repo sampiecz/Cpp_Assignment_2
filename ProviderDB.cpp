@@ -78,7 +78,7 @@ void ProviderDB::sortBySpecialty()
     {
         bucket = providerArray[i];
 
-        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderSpecialty(), bucket.getProviderSpecialty()) > 0); j--)
+        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderSpecialty(), bucket.getProviderSpecialty()) < 0); j--)
             providerArray[j] = providerArray[j-1];
 
         providerArray[j] = bucket;

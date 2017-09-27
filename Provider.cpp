@@ -1,3 +1,18 @@
+/***********************************************************
+ CSCI 241 - Assignment 2 - Fall 2017
+ 
+ Progammer: Sam Piecz
+ Z-ID: Z1732715
+ Section: 1
+ TA: Sumaiya Abdul
+ Date Due: September 27, 2017
+ 
+ Purpose: This cpp file allows the creation of provider
+ instances.  It also allows providers to be printed.
+ These two tasks are done with an instantiator method and
+ print method.
+ ************************************************************/
+
 #include <iostream>
 #include "Provider.h"
 
@@ -22,22 +37,3 @@ void Provider::print() const
     cout << phone_number << endl;
     cout << "\n";
 }
-
-/*
-
-char Provider::getProviderNumber() const
-{
-   return number;
-}
-
-char Provider::getSpecialty() const
-{
-    return specialty;
-}
-
-char Provider::getName() const
-{
-    return name;
-}
-
-*/
