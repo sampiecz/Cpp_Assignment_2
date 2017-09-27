@@ -29,21 +29,21 @@ int main()
     cout << "Sorted by Provider Number" << endl;
     cout << "#######################################################################" << endl;
 
-    loadData.sortByProviderNumber();
+    loadData.sort(&numberLess);
     loadData.print();
 
     cout << "#######################################################################" << endl;
     cout << "Sorted by Specialty" << endl;
     cout << "#######################################################################" << endl;
 
-    loadData.sortBySpecialty();
+    loadData.sort(&specialtyLess);
     loadData.print();
 
     cout << "#######################################################################" << endl;
     cout << "Sorted by Name" << endl;
     cout << "#######################################################################" << endl;
 
-    loadData.sortByName();
+    loadData.sort(&nameLess);
     loadData.print();
 
 }
