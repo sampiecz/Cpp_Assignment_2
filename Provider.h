@@ -42,6 +42,18 @@ class Provider
 
         //Accessor method that returns specialty
         const char* getProviderSpecialty() { return specialty; }
+
+        //Provider pointers - extra credit
+        Provider(const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*);
+        const char* getProviderNumber() const;
+        const char* getName() const;
+        const char* getSpecialty() const;
+        const char* getAddress1() const;
+        const char* getAddress2() const;
+        const char* getCity() const;
+        const char* getState() const;
+        const char* getZipCode() const;
+        const char* getPhoneNumber() const;
 };
 
 #endif

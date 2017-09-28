@@ -14,14 +14,66 @@
  ************************************************************/
 
 #include <iostream>
+#include <cstring>
 #include "Provider.h"
 
 using std::cout;
 using std::endl;
+using std::strcpy;
 
 //Provider Constructor
 Provider::Provider()
 {
+}
+
+// Extra credit part
+Provider::Provider(const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*)
+{
+}
+
+const char* Provider::getProviderNumber() const
+{
+    return number;
+}
+
+const char* Provider::getName() const
+{
+    return name;
+}
+
+const char* Provider::getSpecialty() const
+{
+    return specialty;
+}
+
+const char* Provider::getAddress1() const
+{
+    return address_1;
+}
+
+const char* Provider::getAddress2() const
+{
+    return address_2;
+}
+
+const char* Provider::getCity() const
+{
+    return city;
+}
+
+const char* Provider::getState() const
+{
+    return state;
+}
+
+const char* Provider::getZipCode() const
+{
+    return zip_code;
+}
+
+const char* Provider::getPhoneNumber() const
+{
+   return phone_number;
 }
 
 //Print
