@@ -9,10 +9,16 @@
 //
 // PURPOSE:     Declaration for the ProviderDB class, which represents
 // an array of providers. Also contains method prototypes for sorting.
-//********************************************************************
+//********************************************************************/
 
 #include "Provider.h"
 
+/***************************************************************
+ Class ProviderDB
+ 
+ Use: Creates a new data type called ProviderDB. This takes
+ provider instances and packs them into an array. Hence the name.
+ ***************************************************************/
 class ProviderDB
 {
     private:
@@ -35,7 +41,8 @@ class ProviderDB
 
 };
 
-
+// Prototypes for functions.  Not methods so that we can pass them
+// into class instance's methods.
 bool nameLess(const Provider&, const Provider&);
 bool numberLess(const Provider&, const Provider&);
 bool specialtyLess(const Provider&, const Provider&);

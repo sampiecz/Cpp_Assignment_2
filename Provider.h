@@ -11,10 +11,17 @@
 //		information about a health care provider.
 //********************************************************************
 
+
+
+/***************************************************************
+ Class Provider
+ 
+ Use: Creates a new data type called Provider.
+ ***************************************************************/
 class Provider
 {
     private:
-        //Data members
+        // Data members
         char number[7] = {};
         char specialty[41] = {};
         char name[41] = {};
@@ -26,16 +33,18 @@ class Provider
         char phone_number[15] = {};
 
     public:
-        //Method prototypes
+        // Method prototypes
 
-        //Default constructor
+        // Default constructor
         Provider();
 
-        //Print provider data
+        // Print provider data
         void print() const;
 
-        //Provider pointers - extra credit
+        // Alternative provider constructor
         Provider(const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*);
+        
+        // Chunk of getters
         const char* getProviderNumber() const;
         const char* getProviderName() const;
         const char* getProviderSpecialty() const;

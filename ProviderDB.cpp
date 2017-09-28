@@ -29,6 +29,7 @@ using std::ios;
  Use: Instiates an instance of the ProviderDB class
  
  Parameters: 1. No parameters
+ Returns: Nothing
  ***************************************************************/
 ProviderDB::ProviderDB()
 {
@@ -43,6 +44,7 @@ ProviderDB::ProviderDB()
  Parameters: 1. const char* filename: A const char pointer called 
  filename. This allows a filename to be provided when the object
  is instianted.
+ Returns: Nothing
  ***************************************************************/
 ProviderDB::ProviderDB(const char* filename)
 {
@@ -67,6 +69,7 @@ ProviderDB::ProviderDB(const char* filename)
  that is contained in the array.
  
  Parameters: No parameters.
+ Returns: Nothing
  ***************************************************************/
 void ProviderDB::print() const
 {
@@ -78,12 +81,15 @@ void ProviderDB::print() const
 }
 
 /***************************************************************
- sortByProviderNumber
+ sort
  
- Use: Loops through ProviderDB array and prints each instance
- that is contained in the array.
+ Use: Fancy sort method that allows one to pass in a specific
+ sort function for each use case.  Said to be more efficient 
+ and clean but takes more code to write. Plus side, calling
+ this function is much more clean in int main.
  
- Parameters: No parameters.
+ Parameters: compare pointer  and const references to Provider
+ Returns: Nothing
  ***************************************************************/
 void ProviderDB::sort(bool (*compare)(const Provider&, const Provider&))
 {
@@ -104,12 +110,14 @@ void ProviderDB::sort(bool (*compare)(const Provider&, const Provider&))
 
 
 /***************************************************************
- sortByProviderNumber
+ nameLess
  
- Use: Loops through ProviderDB array and prints each instance
- that is contained in the array.
+ Use: Function that can be passed into sort method. Sorts providers
+ by name.
  
- Parameters: No parameters.
+ Parameters: Two const references to Provider.
+ Return: A comparison between string 1 and string 2. These strings
+ have been "pulled in" from the getter methods. 
  ***************************************************************/
 bool nameLess(const Provider& s1, const Provider& s2)
 {
@@ -117,12 +125,16 @@ bool nameLess(const Provider& s1, const Provider& s2)
 }
 
 /***************************************************************
- sortByProviderNumber
+ specialtyLess
  
- Use: Loops through ProviderDB array and prints each instance
- that is contained in the array.
+ Use: Function that can be passed into sort method. Sorts providers
+ by specialty.  The name is bad because it sorts in descending
+ order.  However at the time of writing this comment it is 11:40PM
+ and at this point I don't think I have the time to rename it.
  
- Parameters: No parameters.
+ Parameters: Two const references to Provider.
+ Return: A comparison between string 1 and string 2. These strings
+ have been "pulled in" from the getter methods. 
  ***************************************************************/
 bool specialtyLess(const Provider& s1, const Provider& s2)
 {
@@ -130,12 +142,14 @@ bool specialtyLess(const Provider& s1, const Provider& s2)
 }
 
 /***************************************************************
- sortByProviderNumber
+ numberLess
  
- Use: Loops through ProviderDB array and prints each instance
- that is contained in the array.
+ Use: Function that can be passed into sort method. Sorts providers
+ by name.
  
- Parameters: No parameters.
+ Parameters: Two const references to Provider.
+ Return: A comparison between string 1 and string 2. These strings
+ have been "pulled in" from the getter methods.
  ***************************************************************/
 bool numberLess(const Provider& s1, const Provider& s2)
 {
