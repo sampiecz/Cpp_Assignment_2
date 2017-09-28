@@ -36,42 +36,42 @@ const char* Provider::getProviderNumber() const
     return number;
 }
 
-const char* Provider::getName() const
+const char* Provider::getProviderName() const
 {
     return name;
 }
 
-const char* Provider::getSpecialty() const
+const char* Provider::getProviderSpecialty() const
 {
     return specialty;
 }
 
-const char* Provider::getAddress1() const
+const char* Provider::getProviderAddress1() const
 {
     return address_1;
 }
 
-const char* Provider::getAddress2() const
+const char* Provider::getProviderAddress2() const
 {
     return address_2;
 }
 
-const char* Provider::getCity() const
+const char* Provider::getProviderCity() const
 {
     return city;
 }
 
-const char* Provider::getState() const
+const char* Provider::getProviderState() const
 {
     return state;
 }
 
-const char* Provider::getZipCode() const
+const char* Provider::getProviderZipCode() const
 {
     return zip_code;
 }
 
-const char* Provider::getPhoneNumber() const
+const char* Provider::getProviderPhoneNumber() const
 {
    return phone_number;
 }

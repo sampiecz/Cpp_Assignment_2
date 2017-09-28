@@ -46,14 +46,14 @@ class Provider
         //Provider pointers - extra credit
         Provider(const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*);
         const char* getProviderNumber() const;
-        const char* getName() const;
-        const char* getSpecialty() const;
-        const char* getAddress1() const;
-        const char* getAddress2() const;
-        const char* getCity() const;
-        const char* getState() const;
-        const char* getZipCode() const;
-        const char* getPhoneNumber() const;
+        const char* getProviderName() const;
+        const char* getProviderSpecialty() const;
+        const char* getProviderAddress1() const;
+        const char* getProviderAddress2() const;
+        const char* getProviderCity() const;
+        const char* getProviderState() const;
+        const char* getProviderZipCode() const;
+        const char* getProviderPhoneNumber() const;
 };
 
 #endif
