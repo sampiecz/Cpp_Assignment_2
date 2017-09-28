@@ -78,7 +78,7 @@ bool nameLess(const Provider& s1, const Provider& s2)
 
 bool specialtyLess(const Provider& s1, const Provider& s2)
 {
-    return (strcmp(s1.getProviderSpecialty(), s2.getProviderSpecialty()) > 0);
+    return (strcmp(s1.getProviderSpecialty(), s2.getProviderSpecialty()) < 0);
 }
 
 bool numberLess(const Provider& s1, const Provider& s2)
