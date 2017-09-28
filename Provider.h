@@ -34,15 +34,6 @@ class Provider
         //Print provider data
         void print() const;
 
-        //Accessor method returns provider number data member
-        const char* getProviderNumber() { return number; }
-
-        //Accessor method that returns specialty data member
-        const char*  getProviderName() { return name; }
-
-        //Accessor method that returns specialty
-        const char* getProviderSpecialty() { return specialty; }
-
         //Provider pointers - extra credit
         Provider(const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*);
         const char* getProviderNumber() const;

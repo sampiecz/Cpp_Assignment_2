@@ -27,8 +27,25 @@ Provider::Provider()
 }
 
 // Extra credit part
-Provider::Provider(const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*)
+Provider::Provider(const char* number_1,
+                   const char* name_1,
+                   const char* specialty_1,
+                   const char* address_1_1,
+                   const char* address_2_1,
+                   const char* city_1,
+                   const char* state_1,
+                   const char* zip_code_1,
+                   const char* phone_number_1)
 {
+    strcpy(number, number_1);
+    strcpy(name, name_1);
+    strcpy(specialty, specialty_1);
+    strcpy(address_1, address_1_1);
+    strcpy(address_2, address_2_1);
+    strcpy(city, city_1);
+    strcpy(state, state_1);
+    strcpy(zip_code, zip_code_1);
+    strcpy(phone_number, phone_number_1);
 }
 
 const char* Provider::getProviderNumber() const

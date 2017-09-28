@@ -2,7 +2,6 @@
 #include <fstream>
 #include <cstring>
 #include "ProviderDB.h"
-#include "Provider.h"
 
 using std::cout;
 using std::cerr;
@@ -52,57 +51,6 @@ void ProviderDB::print() const
     }
 }
 
-/*
-void ProviderDB::sortByProviderNumber()
-{
-    int i, j;
-    Provider bucket;
-
-    for (i = 1; i < numberOfProviders; i++)
-    {
-        bucket = providerArray[i];
-
-        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderNumber(), bucket.getProviderNumber()) > 0); j--)
-            providerArray[j] = providerArray[j-1];
-
-        providerArray[j] = bucket;
-    }
-}
-
-void ProviderDB::sortBySpecialty()
-{
-    int i, j;
-    Provider bucket;
-
-    for (i = 1; i < numberOfProviders; i++)
-    {
-        bucket = providerArray[i];
-
-        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderSpecialty(), bucket.getProviderSpecialty()) < 0); j--)
-            providerArray[j] = providerArray[j-1];
-
-        providerArray[j] = bucket;
-    }
-}
-
-void ProviderDB::sortByName()
-{
-    int i, j;
-    Provider bucket;
-
-    for (i = 1; i < numberOfProviders; i++)
-    {
-        bucket = providerArray[i];
-
-        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderName(), bucket.getProviderName()) > 0); j--)
-            providerArray[j] = providerArray[j-1];
-
-        providerArray[j] = bucket;
-    }
-}
-*/
-
-
 //Attempt to start extra credit
 void ProviderDB::sort(bool (*compare)(const Provider&, const Provider&))
 {
@@ -113,7 +61,7 @@ void ProviderDB::sort(bool (*compare)(const Provider&, const Provider&))
     {
         bucket = providerArray[i];
 
-        for (j = i; (j > 0) && (strcmp(providerArray[j-1].getProviderNumber(), bucket.getProviderNumber()) > 0); j--)
+        for (j = i; (j > 0) && (compare(providerArray[j-1], bucket)); j--)
             providerArray[j] = providerArray[j-1];
 
         providerArray[j] = bucket;
@@ -125,24 +73,15 @@ void ProviderDB::sort(bool (*compare)(const Provider&, const Provider&))
 // Or I should be declaring it as a method of the Provider class. Not really sure. 
 bool nameLess(const Provider& s1, const Provider& s2)
 {
-    if (strcmp(s1.getProviderName(), s2.getProviderName()) < 0)
-        return true;
-    else
-        return false;
+    return (strcmp(s1.getProviderName(), s2.getProviderName()) > 0);
 }
 
 bool specialtyLess(const Provider& s1, const Provider& s2)
 {
-    if (strcmp(s1.getProviderSpecialty(), s2.getProviderSpecialty()) < 0)
-        return true;
-    else
-        return false;
+    return (strcmp(s1.getProviderSpecialty(), s2.getProviderSpecialty()) > 0);
 }
 
 bool numberLess(const Provider& s1, const Provider& s2)
 {
-    if (strcmp(s1.getProviderNumber(), s2.getProviderNumber()) < 0)
-        return true;
-    else
-        return false;
+    return (strcmp(s1.getProviderNumber(), s2.getProviderNumber()) > 0);
 }
