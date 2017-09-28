@@ -5,7 +5,7 @@
 // FILE:	Provider.h
 // AUTHOR:	Samuel Piecz
 // LOGON ID:	Z1732715
-// DUE DATE:	9/26/17
+// DUE DATE:	9/27/17
 //
 // PURPOSE:	Declaration for the Provider class, which represents
 //		information about a health care provider.

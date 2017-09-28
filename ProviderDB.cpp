@@ -1,3 +1,16 @@
+/***********************************************************
+ CSCI 241 - Assignment 2 - Fall 2017
+ Progammer: Sam Piecz
+ Z-ID: Z1732715
+ Section: 1
+ TA: Sumaiya Abdul
+ Date Due: September 27, 2017
+ Purpose: Takes all takes all the classes and their methods
+ makes it possible to use them all in one place cleanly. It
+ outputs an instance of the ProviderDB class and sorts and 
+ prints it.
+ ************************************************************/
+
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -10,10 +23,27 @@ using std::ifstream;
 using std::ios;
 
 
+/***************************************************************
+ ProviderDB
+ 
+ Use: Instiates an instance of the ProviderDB class
+ 
+ Parameters: 1. No parameters
+ ***************************************************************/
 ProviderDB::ProviderDB()
 {
 }
 
+/***************************************************************
+ ProviderDB
+ 
+ Use: Instiates an instance of the ProviderDB class, but allows
+ a file to be taken as a parameter.
+ 
+ Parameters: 1. const char* filename: A const char pointer called 
+ filename. This allows a filename to be provided when the object
+ is instianted.
+ ***************************************************************/
 ProviderDB::ProviderDB(const char* filename)
 {
     ifstream inFile;
@@ -31,16 +61,12 @@ ProviderDB::ProviderDB(const char* filename)
 }
 
 /***************************************************************
- print_provider_array
+ print
  
- Use: Loops through array of each individual provider and calls
- the provider print method to output each individual provider's
- data.
+ Use: Loops through ProviderDB array and prints each instance
+ that is contained in the array.
  
- Parameters: 1. p_array: An array containing arrays of each
- individual provider's data.
- 
- 2. j: Placeholder for loop, nothing worth describing.
+ Parameters: No parameters.
  ***************************************************************/
 void ProviderDB::print() const
 {
@@ -51,7 +77,14 @@ void ProviderDB::print() const
     }
 }
 
-//Attempt to start extra credit
+/***************************************************************
+ sortByProviderNumber
+ 
+ Use: Loops through ProviderDB array and prints each instance
+ that is contained in the array.
+ 
+ Parameters: No parameters.
+ ***************************************************************/
 void ProviderDB::sort(bool (*compare)(const Provider&, const Provider&))
 {
     int i, j;
@@ -69,18 +102,41 @@ void ProviderDB::sort(bool (*compare)(const Provider&, const Provider&))
 
 }
 
-// Needs to be here, but why isn't it a method? I'm assuming the prof messed up?
-// Or I should be declaring it as a method of the Provider class. Not really sure. 
+
+/***************************************************************
+ sortByProviderNumber
+ 
+ Use: Loops through ProviderDB array and prints each instance
+ that is contained in the array.
+ 
+ Parameters: No parameters.
+ ***************************************************************/
 bool nameLess(const Provider& s1, const Provider& s2)
 {
     return (strcmp(s1.getProviderName(), s2.getProviderName()) > 0);
 }
 
+/***************************************************************
+ sortByProviderNumber
+ 
+ Use: Loops through ProviderDB array and prints each instance
+ that is contained in the array.
+ 
+ Parameters: No parameters.
+ ***************************************************************/
 bool specialtyLess(const Provider& s1, const Provider& s2)
 {
     return (strcmp(s1.getProviderSpecialty(), s2.getProviderSpecialty()) < 0);
 }
 
+/***************************************************************
+ sortByProviderNumber
+ 
+ Use: Loops through ProviderDB array and prints each instance
+ that is contained in the array.
+ 
+ Parameters: No parameters.
+ ***************************************************************/
 bool numberLess(const Provider& s1, const Provider& s2)
 {
     return (strcmp(s1.getProviderNumber(), s2.getProviderNumber()) > 0);

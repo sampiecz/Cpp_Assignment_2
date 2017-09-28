@@ -5,11 +5,12 @@
 // FILE:        ProviderDB.h
 // AUTHOR:      Samuel Piecz
 // LOGON ID:    Z1732715
-// DUE DATE:    9/26/17
+// DUE DATE:    9/27/17
 //
-// PURPOSE:     Declaration for the Provider class, which represents
-//              information about a health care provider.
+// PURPOSE:     Declaration for the ProviderDB class, which represents
+// an array of providers. Also contains method prototypes for sorting.
 //********************************************************************
+
 #include "Provider.h"
 
 class ProviderDB
@@ -34,9 +35,7 @@ class ProviderDB
 
 };
 
-// Was told to put this function outside of the class.
-// Still don't really understand why that would be the case.
-// I guess it gets passed to the sort method as an argument. 
+
 bool nameLess(const Provider&, const Provider&);
 bool numberLess(const Provider&, const Provider&);
 bool specialtyLess(const Provider&, const Provider&);
