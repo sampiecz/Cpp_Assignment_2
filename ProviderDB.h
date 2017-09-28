@@ -7,11 +7,12 @@
 // LOGON ID:    Z1732715
 // DUE DATE:    9/26/17
 //
-// PURPOSE:     Declaration for the Provider class, which represents
-//              information about a health care provider.
+// PURPOSE:     Declaration for the ProviderDB class, which represents
+// an array of providers. Also contains method prototypes for sorting.
 //********************************************************************
 #include "Provider.h"
 
+// Declares the ProviderDB class
 class ProviderDB
 {
     private:
@@ -29,7 +30,7 @@ class ProviderDB
         //Print function
         void print() const;
 
-        //Sorting method
+        //Sorting method 
         void sortByProviderNumber();
 
         //Sorting method
